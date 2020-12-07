@@ -11,36 +11,20 @@
 </head>
 
 <body>
-
-
-    <i class="fa fa-car"></i>
-    <i class="fa fa-car" style="font-size:48px;"></i>
-    <i class="fa fa-car" style="font-size:60px;color:red;"></i>
-
-
-    <hr>
     <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Nick Name</th>
-                <th>Office</th>
+                <th> <i class="fa fa-car"></i></th>
                 <th>Age</th>
                 <th>Birthday</th>
                  
             </tr>
         </thead>
         <tbody>
-            <!-- 
-                id: 1
-                name: "Sumit"
-                nickName: "Ravi" 
-                company: "intellogi"
-                age: 55
-                married: false
-                birthday: "2020-12-06T05:28:03.819+00:00"
-            -->
+           
         </tbody>
     </table>
     <hr>
@@ -55,37 +39,17 @@
                 success: function (data) {
                     console.dir({ "success ": data });
                     var t = $('#example').DataTable();
-                    var counter = 1;
-
                     for (var i = 0; i < data.length; i++) {
-                        // t.row.add( [
-                        //     counter +'.1',
-                        //     counter +'.2',
-                        //     counter +'.3',
-                        //     counter +'.4',
-                        //     counter +'.4.4',
-                        //     counter +'.5'
-                        // ] ).draw( false );
                         t.row.add( [  data[i].id, data[i].name, data[i].nickName, data[i].company, data[i].age, data[i].birthday ] ).draw( false );
                     }
-
-                    // t.row.add( [  data.id, data.name, data.nickName, data.company, data.age, data.birthday ] ).draw( false );
-            
-                    counter++;
-                   
-
                 }, error: function (err) {
                     console.dir({ "error ": err });
                 }
             });
 
-
-
             $('#example').DataTable({
                 "pagingType": "full_numbers"
             });
-
-
 
         });
     </script>
