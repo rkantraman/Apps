@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Ravi Ssharma</h2>
+
+
+    <script src="js/jquery-3.5.1.js"></script>
+
+    <script>
+        
+
+
+        $.ajax({
+            url: 'http://localhost:8080',
+            
+            error: function(err) {
+               console.dir("err ">>err);
+            },
+            success: function(data) {
+                console.dir("err ">>data);
+            },
+            type: 'GET'
+        });
+
+
+    </script>
+
+</body>
+</html>
