@@ -23,6 +23,8 @@ public class People {
 	    private String company;
 	    private Date birthday;
 	    private boolean married;
+	    
+	    
 //	    @OneToOne(cascade = ALL)
 //	    @JoinColumn(name = "id_card_id")
 //	    private IdCard idCard;
@@ -85,6 +87,11 @@ public class People {
 		}
 		public void setMarried(boolean married) {
 			this.married = married;
+		}
+		@Override
+		public String toString() {
+			return "People [id=" + id + ", age=" + age + ", name=" + name + ", nickName=" + nickName + ", company="
+					+ company + ", birthday=" + birthday + ", married=" + married + "]";
 		}
 	
 	

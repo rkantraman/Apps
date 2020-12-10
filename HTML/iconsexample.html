@@ -5,12 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/jquery.dataTables.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>
+
+        <div class="container">
+
+
+        
+
+            <form class="login-form" autocomplete="off">
+
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="name" id = "name" class="form-control" placeholder="Your Name" type="text">
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="nickName" id = "nickName" class="form-control" placeholder="Your Name" type="text">
+                </div> <!-- form-group// -->
+
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                    </div>
+                    <input name="company" id ="company" class="form-control" placeholder="company" type="text">
+                </div> <!-- form-group// -->
+
+                 
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                    </div>
+                    <select class="form-control" id = "married" name="married">
+                        <option selected=""> No</option>
+                        <option>Yes</option>
+                     
+                    </select>
+                </div> <!-- form-group end.// -->
+                
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input name = "age" id = "age" class="form-control" placeholder="Age" type="text">
+                </div> <!-- form-group// -->     
+                
+                
+                <div class="form-group">
+                    <button id = "storeDeatailBtn" type="button" class="btn btn-primary btn-block"> Store Details </button>
+                </div> <!-- form-group// -->      
+                 
+
+            </form>
+            <!-- login-form  End -->
+        </div>
+
     <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
@@ -29,7 +92,15 @@
     </table>
     <hr>
     <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
     <script src="js/jquery.dataTables.js"></script>
+
+    <script src="js/serverReq.js"></script>
+
+
     <script>
         $(document).ready(function () {
 

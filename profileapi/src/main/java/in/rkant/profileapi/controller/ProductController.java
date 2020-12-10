@@ -27,7 +27,7 @@ public class ProductController {
 	}
 	
  
-	private List<Product> getProduct() {
+	public List<Product> getProduct() {
 
 		List<Product> findAll = (List<Product>) productRepository.findAll();
 //		Page<Product> allProducts = productRepository.findAll(firstPageWithTwoElements);
